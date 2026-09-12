@@ -1,5 +1,5 @@
 /* ==========================================================
-   NEXORA — script.js
+   M2D TECH — script.js
    Menu mobile, liens WhatsApp, FAQ, navbar au scroll, révélations
    ========================================================== */
 

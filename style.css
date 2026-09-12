@@ -1,5 +1,5 @@
 /* ==========================================================
-   NEXORA — style.css
+   M2D TECH — style.css
    Palette : noir chocolat, bordeaux profond, ivoire (base)
              rose nude, champagne (accents)
    Typo : Cormorant Garamond (titres) / Manrope (texte)
@@ -482,6 +482,114 @@ h1, h2, h3 {
 }
 
 /* =========================
+   PORTFOLIO
+========================= */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.portfolio-card {
+    background: var(--ivoire);
+    border: 1px solid rgba(23, 19, 21, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px rgba(23, 19, 21, 0.12);
+}
+
+.portfolio-preview {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-preview-aura {
+    background: linear-gradient(135deg, #1c1712 0%, #3d2c22 55%, #c9a98c 100%);
+}
+
+.portfolio-preview-sesame {
+    background: linear-gradient(135deg, #171315 0%, #542536 60%, #C9B18A 100%);
+}
+
+.portfolio-browser-bar {
+    display: flex;
+    gap: 5px;
+    margin-bottom: auto;
+}
+
+.portfolio-browser-bar span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(250, 247, 242, 0.35);
+}
+
+.portfolio-preview-body {
+    margin-top: auto;
+}
+
+.portfolio-logo {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--ivoire);
+    letter-spacing: 0.02em;
+}
+
+.portfolio-preview-sub {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(250, 247, 242, 0.7);
+    margin-top: 6px;
+}
+
+.portfolio-body {
+    padding: 28px 30px 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.portfolio-category {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bordeaux);
+    margin-bottom: 10px;
+}
+
+.portfolio-name {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.portfolio-desc {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    margin-bottom: 26px;
+    flex: 1;
+}
+
+.portfolio-link {
+    align-self: flex-start;
+}
+
+/* =========================
    TARIFS
 ========================= */
 .pricing {
@@ -725,7 +833,7 @@ h1, h2, h3 {
 }
 
 /* =========================
-   POURQUOI NEXORA — checklist
+   POURQUOI M2D TECH — checklist
 ========================= */
 .checklist {
     display: grid;
@@ -1035,7 +1143,10 @@ h1, h2, h3 {
 @media screen and (max-width: 860px) {
     .nav-links {
         position: fixed;
-        inset: 74px 0 0 0;
+        top: 74px;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 74px);
         background: var(--ivoire);
         flex-direction: column;
         align-items: flex-start;
@@ -1080,6 +1191,7 @@ h1, h2, h3 {
     .mockup-phone { width: 96px; right: -4%; bottom: -10%; }
 
     .advantages { grid-template-columns: 1fr; gap: 34px; }
+    .portfolio-grid { grid-template-columns: 1fr; gap: 24px; }
     .sectors { grid-template-columns: repeat(2, 1fr); }
     .services-list { grid-template-columns: 1fr; }
     .timeline { grid-template-columns: 1fr; row-gap: 36px; }
