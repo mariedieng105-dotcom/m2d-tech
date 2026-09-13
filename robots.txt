@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mariedieng105-dotcom.github.io/m2d-tech/sitemap.xml
